@@ -1,0 +1,14 @@
+body {
+    background-color: #f7f7f8
+}
+
+.pannel {
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius:5px; /* 圆角 */
+}
+
+.goods_inner {
+    margin: 10px;
+}
+

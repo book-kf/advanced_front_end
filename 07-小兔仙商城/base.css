@@ -2,13 +2,31 @@ body {
     background-color: #f7f7f8
 }
 
+
+
 .pannel {
     margin-bottom: 10px;
     background-color: #fff;
-    border-radius:5px; /* 圆角 */
+    border-radius:5px; /*圆角 */
+}
+.goods{
+    display: flex;
+    padding: 11px 11px 11px 11px;
 }
 
 .goods_inner {
-    margin: 10px;
+
+    margin: 8px;
+}
+
+img {
+    width: 100%; /* 为了让图片跟着父级的大小走*/
+    vertical-align: middle; /*垂直中间对齐*/
+}
+
+.goods .pic{
+    /*根据上面设置的img，这里调整pic标签就可以调整image标签了*/
+    width: 85px;
+    height: 85px;
 }
 

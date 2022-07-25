@@ -1,0 +1,30 @@
+body {
+    background-color: #f5f5f5;
+}
+#outside {
+    width: 234px;
+    height: 300px;
+    background-color: #ffffff;
+    text-align: center;
+    margin: 0 auto;
+    
+}
+
+img {
+    width: 160px;
+}
+
+#car-name {
+    line-height: 25px;
+}
+
+.product-font{
+    font-size: 14px;
+}
+
+#type{
+    color: #cccccc;
+}
+#price{
+    color: red
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 空格隔开的是后代, 儿子,孙子,重孙子 */
+        /* div a {
+            color: red;
+        } */
+
+        /* 只想选中儿子a */
+        /* div的儿子a文字颜色是红色 */
+        div>a {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        父级
+        <a href="#">这是div里面的a</a>
+        <p>
+            <a href="#">这是div里面的p里面的a</a>
+        </p>
+    </div>
+</body>
+</html>

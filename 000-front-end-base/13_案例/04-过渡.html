@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 过渡配合hover使用, 谁变化谁加过渡属性 */
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 宽度200, 悬停的时候宽度600, 花费1秒钟 */
+            /* transition: width 1s, background-color 2s; */
+
+            /* 如果变化的属性多, 直接写all,表示所有 */
+            transition: all 1s;
+        }
+
+        .box:hover {
+            width: 600px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

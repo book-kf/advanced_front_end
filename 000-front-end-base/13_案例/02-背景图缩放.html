@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 400px;
+            height:300px;
+            background-color: pink;
+            background-image: url(./images/1.jpg);
+            background-repeat: no-repeat;
+            /* background-size: 300px; */
+            /* background-size: 50%; */
+
+            /* 如果图的宽或高与盒子的尺寸相同了, 另一个方向停止缩放 -- 导致盒子可能有留白 */
+            background-size: contain;
+            /* 保证宽或高和盒子尺寸完全相同 , 导致图片显示不全 */
+            /* background-size: cover; */
+
+            /* 工作中, 图的比例和盒子的比例都是相同的, contain 和cover效果完全相同; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

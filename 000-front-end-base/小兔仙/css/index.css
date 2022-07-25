@@ -1,0 +1,246 @@
+/* 放index页面的样式表 */
+/* banner */
+.banner {
+    height: 500px;
+    background-color: #f5f5f5;
+}
+
+.banner .wrapper {
+    position: relative;
+    height: 500px;
+    background-color: pink;
+}
+
+/* 侧导航 */
+.banner .aside {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 500px;
+    background-color: rgba(0,0,0,.8);
+}
+
+.banner .aside li {
+    height: 50px;
+    line-height: 50px;
+}
+
+.banner .aside a {
+    position: relative;
+    /* 宽度和父级一样 */
+    padding-left: 36px;
+    padding-right: 19px;
+    display: block;
+    height: 50px;
+
+    color: #fff;
+}
+
+.banner .aside a span {
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+.banner .aside a:hover {
+    background-color: #27ba9b;
+}
+
+/* a的里面最后的位置添加箭头 */
+.banner .aside a::after {
+    position: absolute;
+    right: 19px;
+    top: 19px;
+    content: '';
+    width: 6px;
+    height: 11px;
+    background-image: url(../images/sprites.png);
+    background-position: -80px -110px;
+}
+
+/* 箭头 */
+.next,
+.prev {
+    position: absolute;
+    top: 228px;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(0,0,0,.2);
+    background-image: url(../images/sprites.png);
+    border-radius: 50%;
+}
+
+/* 背景图位置负责2件事: 改变箭头在盒子里面的位置; 改变精灵图的位置 */
+/* 导致在精灵图中测量的尺寸不准确 */
+/* 解决方案有2种: 
+    1. 书写背景图位置属性, 借助谷歌的调试工具调试具体的位置数值
+    2. 书写标签的时候, a负责盒子,里面再添加一个span负责箭头
+*/
+.prev {
+    left: 260px;
+    background-position: 14px -60px;
+}
+
+.next {
+    right: 10px;
+    background-position: -23px -60px;
+}
+
+/* 圆点 */
+.banner ol {
+    position: absolute;
+    left: 680px;
+    bottom: 30px;
+
+    height: 10px;
+}
+
+.banner ol li {
+    float: left;
+    margin-right: 24px;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.banner ol .current {
+    background-color: #fff;
+}
+
+/* 新鲜好物 */
+
+.goods .hd {
+    height: 114px;
+    line-height: 114px;
+}
+
+.goods .hd h2 {
+    float: left;
+    font-size: 29px;
+    font-weight: 400;
+
+    height: 114px;
+}
+
+.goods .hd h2 span {
+    margin-left: 34px;
+    font-size: 16px;
+    color: #999;
+}
+
+.goods .hd a,
+.shengxian .hd .more {
+    float: right;
+    color: #999;
+}
+
+.goods .hd a::after,
+.shengxian .hd .more::after {
+    content: '';
+    display: inline-block;
+    margin-left: 13px;
+    width: 7px;
+    height: 13px;
+    background-image: url(../images/sprites.png);
+    background-position: 0 -110px;
+    vertical-align: middle;
+}
+
+.goods .bd li {
+    position: relative;
+    float: left;
+    margin-right: 8px;
+    width: 304px;
+    height: 405px;
+    background-color: #f0f9f4;
+    text-align: center;
+}
+
+.goods .bd li:last-child {
+    margin-right: 0;
+}
+
+.goods .bd li img {
+    width: 304px;
+}
+
+.goods .bd li h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.goods .bd li div {
+    color: #9a2e1f;
+    font-size: 17px;
+}
+
+.goods .bd li div span {
+    font-size: 23px;
+}
+
+.goods .bd li b {
+    position: absolute;
+    left: 17px;
+    top:18px;
+    width: 28px;
+    height: 51px;
+    border: 1px solid #27ba9b;
+    border-radius: 2px;
+    font-size: 18px;
+    color: #27ba9b;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/* 生鲜 */
+.shengxian .hd {
+    height: 96px;
+    line-height: 96px;
+}
+
+.shengxian .hd h2 {
+    float: left;
+    font-size: 29px;
+    font-weight: 400;
+}
+
+.shengxian .hd .more {
+    float: right;
+}
+
+.shengxian .hd ul {
+    float: right;
+    margin-right: 65px;
+}
+
+.shengxian .hd ul li {
+    float: left;
+}
+
+.shengxian .hd li a {
+    padding: 2px 7px;
+    margin-left: 6px;
+}
+
+.shengxian .hd li a:hover {
+    background-color: #27ba9b;
+    color: #fff;
+}
+
+.shengxian .bd .left {
+    float: left;
+    width: 240px;
+    height: 610px;
+    background-color: pink;
+}
+
+.shengxian .bd .right {
+    float: left;
+    width: 1000px;
+    height: 610px;
+    background-color: skyblue;
+}

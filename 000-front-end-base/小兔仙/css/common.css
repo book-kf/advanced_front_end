@@ -1,0 +1,144 @@
+/* 各个页面相同的样式表 : 头, 尾部 */
+/* 版心 */
+.shortcut {
+    height: 42px;
+    background-color: #333;
+}
+
+/* 快捷导航 */
+.wrapper {
+    margin: 0 auto;
+    width: 1240px;
+    height: 42px;
+    /* background-color: #fff */
+}
+
+.shortcut .wrapper ul {
+    float: right
+}
+.shortcut .wrapper li {
+    float: left;
+    /* 垂直居中 */
+    line-height:42px; 
+}
+
+.shortcut .wrapper a {
+    /* 左右内边距 */
+    padding: 0 16px;
+    margin-right:5px;
+    border-right: 1px solid #666;
+    font-size: 14px;
+    color: #dcdcdc;
+}
+
+.shortcut .wrapper li:last-child a {
+    margin-right:5px;
+    border-right:0;
+}
+
+.shortcut .wrapper span{
+    display: inline-block;
+    margin-right:8px;
+    width: 11px;
+    height: 16px;
+    background-image: url(../images/sprites.png);
+    background-position: -160px -70px;
+    /* 图和字对不齐的时候适用 */
+    vertical-align: middle;
+}
+
+.header {
+    background-color: pink;
+}
+.header-image {
+    width: 150px;
+    height: 42px;
+    background-color: blue;
+}
+.header-nav {
+    width: 600px;
+    height: 42px;
+    background-color: white;
+}
+.header-search {
+    width: 100px;
+    height: 42px;
+    background-color: black;
+}
+
+.header-content{
+    float: left;
+}
+
+.header-car{
+    float: right;
+    width: 100px;
+    height: 42px;
+    background-color: black;
+}
+
+
+/* 版权footer */
+.footer {
+    height: 250px;
+    background-color: #333;
+}
+
+.footer .wrapper {
+    width: 1393px;
+}
+
+.footer .top {
+    padding-top: 30px;
+    padding-left: 135px;
+    height: 100px;
+    border-bottom: 3px solid #434343;
+}
+
+.footer .top li {
+    position: relative;
+    float: left;
+    margin-right: 300px;
+    width: 195px;
+    height: 58px;
+
+    line-height: 58px;
+}
+
+.footer .top li:last-child {
+    margin-right: 0;
+}
+
+/* 伪元素添加的标签  行内 */
+/* 如果行内块和行内文字无法通过vertical-align或行高对齐, 定位 */
+.footer .top li::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* display: inline-block; */
+    content: '';
+    width: 58px;
+    height: 58px;
+}
+
+.footer .top li span {
+    margin-left: 77px;
+    font-size: 28px;
+    color: #fff;
+}
+
+.footer .bottom {
+    padding-top: 40px;
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+}
+
+.footer .bottom a {
+    font-size: 14px;
+    color: #999;
+}
+
+.footer .bottom p {
+    margin-bottom: 20px;
+}

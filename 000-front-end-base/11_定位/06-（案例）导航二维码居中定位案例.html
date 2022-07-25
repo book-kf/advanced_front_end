@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 因为有通栏：占满一行的边框，所以需要有一个通栏：占满一行的盒子 */
+    .nav {
+      height: 40px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    /* 因为ul中所有的内容都是在网页的宽度固定并且水平居中的盒子内部，所以设置ul为宽度固定并且水平居中的效果（后面项目中所用到的版心） */
+    ul {
+      list-style: none;
+      width: 1200px;
+      margin: 0 auto;
+    }
+
+    ul li {
+      float: left;
+      width: 20%;
+      height: 40px;
+      border-right: 1px solid #ccc;
+      /* 自动内减 */
+      box-sizing: border-box;
+      text-align: center;
+      line-height: 40px;
+    }
+
+    ul .last {
+     border-right: none;
+    }
+
+    ul li a {
+      /* a标签默认是行内元素，宽高由内容撑开，并且无法设置宽高，此时默认情况用户只能点击文字区域才能调整 */
+      /* 如果把a标签转换成块级元素，此时可以设置宽高，会让a标签范围更大，用户可以点击调整的区域也越大 */
+      display: block;
+      /* 宽度不设置块元素会默认占满一行 */
+      height: 40px;
+      text-decoration: none;
+      color: #000;
+    }
+
+    ul li .app {
+      position: relative;
+    }
+
+    .code {
+      position: absolute;
+      left: 50%;
+      top: 41px;
+      transform: translate(-50%);
+    }
+  </style>
+</head>
+<body>
+  <!-- 导航 -->
+  <div class="nav">
+    <ul>
+      <li><a href="#">我要投资</a></li>
+      <li><a href="#">平台介绍</a></li>
+      <li><a href="#">新手专区</a></li>
+      <!-- 因为用户鼠标放在二维码图片上也能跳转，所以证明img也是在a的范围内，因此把img写在a标签的内部 -->
+      <li><a href="#" class="app">手机微金所 <img src="./images/code.jpg" alt="" class="code"> </a></li>
+      <li class="last"><a href="#">个人中心</a></li>
+    </ul>
+  </div>
+
+</body>
+</html>

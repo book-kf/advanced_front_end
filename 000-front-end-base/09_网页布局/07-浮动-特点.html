@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 浮动的标签  顶对齐 */
+        /* 浮动: 在一行排列, 宽高生效 -- 浮动后的标签具备行内块特点 */
+        .one {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+
+            float: right;
+
+            margin-top: 50px;
+        }
+
+        .two {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+
+            float: left;
+
+            /* 因为有浮动, 不能生效 - 盒子无法水平居中 */
+            /* margin: 0 auto; */
+        }
+
+        .three {
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="two">one
+        <div class="one">two</div>
+    </div>
+    
+    <div class="three">three</div>
+</body>
+</html>

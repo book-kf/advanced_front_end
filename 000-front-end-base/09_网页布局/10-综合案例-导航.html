@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            margin: 50px auto;
+            width: 640px;
+            height: 50px;
+            background-color: #ffc0cb;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .nav li {
+            float: left;
+        }
+
+        .nav li a {
+            /* 1. 浮动 / display */
+            /* display: inline-block; */
+            display: block;
+
+            /* 2. 盒子模型 */
+            width: 80px;
+            height: 50px;
+            /* background-color: green; */
+
+            /* 3. 文字样式 */
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav li a:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航 -->
+    <div class="nav">
+        <ul>
+            <li><a href="#">新闻</a></li>
+            <li><a href="#">新闻</a></li>
+            <li><a href="#">新闻</a></li>
+            <li><a href="#">新闻</a></li>
+            <li><a href="#">新闻</a></li>
+            <li><a href="#">新闻</a></li>
+            <li><a href="#">新闻</a></li>
+            <li><a href="#">新闻</a></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* 三种情况
+two肯定是绝对定位，覆盖父元素上面，或者其他浮动的元素上面
+1：one不加定位，那two就相对于body定位
+2：one加绝对定位，那two就会跟随one移动
+3：one加相对定位，即使one移动，two也不会移动，因为one相对定位它是占位原来的位置
+只是元素走了而已，two还是相对它原来所在的位置定位不会被影响 */
+        .one {
+            position: relative;
+            width: 500px;
+            height: 300px;
+            margin-left: 150px;
+            background-color: red;
+        }
+
+        .two {
+            position: absolute;
+            left: 380px;
+            top: 150px;
+            width: 150px;
+            height: 150px;
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="one">
+        <div class="two"></div>
+    </div>
+</body>
+</html>

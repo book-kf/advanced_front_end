@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        /* 第一个li里面的a */
+        li:first-child a {
+            /* background-color: green; */
+            color: red;
+        }
+    </style> -->
+    <style>
+        /* 找到第一个li 里面的  第三个a  设置文字颜色是红色 */
+        li:first-child a:nth-child(3) {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="#">这是第1个li里面的a1</a>
+            <a href="#">这是第1个li里面的a2</a>
+            <!-- 选中第三个a -->
+            <a href="#">这是第1个li里面的a3</a>
+            <a href="#">这是第1个li里面的a4</a>
+            <a href="#">这是第1个li里面的a5</a>
+        </li>
+        <li><a href="#">这是第2个li里面的a</a></li>
+        <li><a href="#">这是第3个li里面的a</a></li>
+        <li><a href="#">这是第4个li里面的a</a></li>
+        <li><a href="#">这是第5个li里面的a</a></li>
+        <li><a href="#">这是第6个li里面的a</a></li>
+        <li><a href="#">这是第7个li里面的a</a></li>
+        <li><a href="#">这是第8个li里面的a</a></li>
+    </ul>
+</body>
+</html>

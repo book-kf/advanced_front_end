@@ -26,49 +26,52 @@ body {
     /* background-color: #f3f5f7; */
     background-color: #fff
 }
+
 .logo{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    
 
 }
 
 .logo-img{
     width: 300px;
-    height: 300px;
+    height: 250px;
     background-color: rgba(0,0,0, 0);
-    
-    
+    transition: all 2s;
 }
 
 .header{
     height: 42px;
-    width:1200px;
+    width: 100%;
     background-color: #fff;
     margin: 0 auto;
-    
-    
+}
+
+.header-li ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header-li{
     height: 42px;
-    width:450px;
     margin: 0 auto;
-    margin-bottom:30px;
-
+    margin-bottom:15px;
 }
 
-
-.header li {
-    float: left;
-    margin-left:18px;
+.header li:nth-child(n+2) {
+    margin-left:28px;
 }
 
 .header li a {
-    display: block;
-    padding: 0 9px;
+    padding: 0 5px;
     height: 42px;
     line-height: 42px;
-    /* border-bottom: 2px solid #00a4ff; */
-    font-size:18 px;
+    font-size:15px;
     color: #050505;
 }
 

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .erweima {
+      width: 149px;
+      height: 152px;
+      border: 1px solid #000;
+      background: url(./images/456.png) no-repeat;
+      position: relative;
+    }
+
+    .close {
+      position: absolute;
+      right: -52px;
+      top: -1px;
+      width: 50px;
+      height: 50px;
+      background: url(./images/bgs.png) no-repeat -159px -102px;
+      cursor: pointer;
+      border: 1px solid #000;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="erweima">
+    <span class="close"></span>
+  </div>
+  <div class="erweima">
+    <span class="close"></span>
+  </div>
+  <div class="erweima">
+    <span class="close"></span>
+  </div>
+  <div class="erweima">
+    <span class="close"></span>
+  </div>
+  <div class="erweima">
+    <span class="close"></span>
+  </div>
+
+  <script>
+    // 1. 获取元素  关闭按钮
+    let close_btn = document.querySelectorAll('.close')
+    // 2. 绑定多个点击事件给close
+    for (let i = 0; i < close_btn.length; i++) {
+      close_btn[i].addEventListener('click', function () {
+        // 3. 关闭当前的那个二维码  点击谁，就关闭谁的爸爸
+        this.parentNode.style.visibility = 'hidden'
+      })
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 时间戳是总的毫秒数  是独一无二的  
+        // 计算倒计时： 核心思想:
+        // 将来时间 9.1 12:00   有一个时间戳   2000000
+        // 现在的时间 8.29 15:00   有一个时间戳   1000000
+        // 可以利用将来的时间戳 减去 现在的时间戳 就是剩余的时间毫秒数
+        // 转换为时分秒就是剩余的时间了
+        // 1. getTime()
+        // let date = new Date()
+        // console.log(date.getTime())
+        // 2. +new Date()
+        console.log(+new Date()) // 当前的时间戳
+        console.log(+new Date('2021-8-30 12:00:00'))  // 指定时间的时间戳
+        // 3. 只能得到当前的
+        // console.log(Date.now())
+    </script>
+</body>
+
+</html>

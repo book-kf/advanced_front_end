@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .active {
+            width: 300px;
+            height: 300px;
+            background-color: hotpink;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one"></div>
+    <script>
+        // 1.获取元素
+        // let box = document.querySelector('css选择器')
+        let box = document.querySelector('div')
+        // 2 设置样式div
+        // box.style.width = '300px'
+        // box.style.height = '300px'
+        // box.style.backgroundColor = 'hotpink'
+        // box.style.marginLeft = '100px'
+        box.className = 'one active'
+    </script>
+</body>
+
+</html>

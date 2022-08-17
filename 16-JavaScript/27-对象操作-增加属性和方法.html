@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let obj = {
+            uname: '小明',
+            age: 18
+
+        }
+        console.log(obj.age)
+        // 修改  对象.属性 =  新值
+        obj.age = 81
+        console.log(obj)
+        // 新增一个属性  js 可以非常方便的动态新增属性或者方法
+        obj.sex = '男'
+        // 会去对象里面找是否有 sex这个属性，如果有则更新值修改
+        // 会去对象里面找是否有 sex这个属性，如果没有则新增这个属性
+        obj.sing = function () {
+            console.log('hi')
+        }
+        console.dir(obj)
+
+        // 删除 (了解)
+        delete obj.uname
+        console.dir(obj)
+
+    </script>
+</body>
+
+</html>

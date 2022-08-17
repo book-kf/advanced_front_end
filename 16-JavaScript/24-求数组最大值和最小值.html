@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 求一个数组最大值和最小值
+        function getArrMaxAndMin(arr) {
+            // 1.声明一个最大值变量和最小值变量
+            let max = min = arr[0]
+            // console.log(max, min)
+            // 2. 遍历循环 得到最大值和最小值
+            for (let i = 1; i < arr.length; i++) {
+                if (max < arr[i]) {
+                    max = arr[i]
+                }
+                if (min > arr[i]) {
+                    min = arr[i]
+                }
+
+                // max < arr[i] ? max = arr[i] : max
+                // min > arr[i] ? min = arr[i] : min
+
+                // max = max < arr[i] ? arr[i] : max
+                // min = min > arr[i] ? arr[i] : min
+
+            }
+            // 3. 返回值最大值和最小值
+            return [max, min]
+        }
+        let value = getArrMaxAndMin([1, 5, 8, 2, 0])
+        // value = [8,0]
+        document.write(`数组的最大值是: ${value[0]}, 数组里面的最小值是： ${value[1]}`)
+
+
+
+    </script>
+</body>
+
+</html>

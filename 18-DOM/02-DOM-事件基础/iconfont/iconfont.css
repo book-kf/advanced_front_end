@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3540310 */
+  /* Color fonts */
+  src: 
+       url('iconfont.woff2?t=1660729987301') format('woff2'),
+       url('iconfont.woff?t=1660729987301') format('woff'),
+       url('iconfont.ttf?t=1660729987301') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close-2:before {
+  content: "\e61a";
+}
+

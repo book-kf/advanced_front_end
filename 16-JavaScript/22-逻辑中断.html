@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        // 带有参数的函数
+        // function getSum(参数1, 参数2...) {
+
+        // }
+        // getSum(参数1,参数2...)
+        // 声明
+        // x 和 y 我们怎么理解 函数内变量 
+        // 如果一个变量没有赋值，则默认为  undefined
+        document.write(undefined + 10)
+        document.write(undefined + true)
+        document.write(undefined + undefined)
+        document.write(undefined + null)
+        document.write(undefined + 'pink')
+
+        // 什么时候当假看  0  undefined  null  '' false  NaN
+        document.write('<br>-------------------------------')
+        function getSum(x, y) {
+            // x = 1 
+            // document.write(x)
+            // document.write(x + y)
+            // 我们想要：如果调用的时候，我们没有传递实参，则默认为 0
+            x = x || 0
+            y = y || 0
+            document.write(x + y)
+        }
+        // 调用
+        // getSum(1, 2)
+        getSum()
+        getSum(1, 2)
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点击</button>
+    <ul>
+        <li>我是内容11111</li>
+    </ul>
+    <script>
+        // 需求，点击按钮，删除小li
+        let btn = document.querySelector('button')
+        let ul = document.querySelector('ul')
+        btn.addEventListener('click', function () {
+            // 删除的语法 父元素.removeChild(子元素)
+            ul.removeChild(ul.children[0])
+        })
+    </script>
+</body>
+
+</html>

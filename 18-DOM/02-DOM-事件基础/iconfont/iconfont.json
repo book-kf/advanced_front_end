@@ -1,0 +1,16 @@
+{
+  "id": "3540310",
+  "name": "first-project",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "29973347",
+      "name": "close",
+      "font_class": "close-2",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    }
+  ]
+}

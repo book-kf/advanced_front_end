@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点击</button>
+    <ul>
+        <li>第1个</li>
+        <li class="two">第2个</li>
+        <li>第3个</li>
+        <li>第4个</li>
+    </ul>
+    <script>
+        let btn = document.querySelector('button')
+        let two = document.querySelector('.two')
+        btn.addEventListener('click', function () {
+            // two.style.color = 'red'
+            two.nextElementSibling.style.color = 'red'
+            two.previousElementSibling.style.color = 'red'
+        })
+    </script>
+</body>
+
+</html>

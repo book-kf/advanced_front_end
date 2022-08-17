@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let obj = {
+            uname: '小明',
+            age: 18,
+            sex: '男'
+        }
+        // for  in  循环语句
+        // 语法
+        // for (let k in 对象名) {}  重点
+        // k 变量   k  或者  key    value  
+        for (let k in obj) {
+            console.log(k)  // 属性名
+            // console.log(obj.k)  // obj.k 意思是 obj里面的k属性
+            // console.log(obj['k'])
+            console.log(obj[k])  // 属性值 
+
+            // 为什么这么写？
+            // k  ===  'uname'   === 'age'  === 'sex'
+            // // obj.k
+            // // obj['uname']
+            // obj['sex']  === 18
+        }
+    </script>
+</body>
+
+</html>

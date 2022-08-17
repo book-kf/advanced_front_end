@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // let num = '10'  
+        // Number(数据)
+        console.log(Number('10.01'))
+        // 转换为数字型，只保留整数，没有四舍五入
+        console.log(parseInt('10'))
+        console.log(parseInt('10.111'))
+        console.log(parseInt('10.999px'))
+        // 转换为数字型，会保留小数
+        console.log(parseFloat('10.999'))
+
+        // 区别：
+        // 1.Number() 只能放数字类型的字符，不能放abc这样的
+        // 否则返回的是 NaN   not A number
+        console.log(Number('10.01abc'))
+        // parseFloat 经常用于过滤px单位
+        // console.log(parseFloat('10.01abc'))
+        console.log(parseFloat('100px'))
+        // console.log(parseFloat('px100px'))
+
+    </script>
+</body>
+
+</html>

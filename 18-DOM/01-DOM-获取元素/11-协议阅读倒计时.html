@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button disabled>我同意</button>
+    <script>
+        let but = document.querySelector('button')
+        i = 3
+        let timer = setInterval(function(){
+            
+            but.innerHTML = `我同意(${i})`
+            i--
+            if (i === 0){
+                but.disabled = false
+                clearInterval(timer)
+                but.innerHTML = `我同意`
+            }
+        }, 800)
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+                table {
+            width: 600px;
+            text-align: center;
+        }
+        
+
+        table,
+        th,
+        td {
+            border: 1px solid #ccc;
+            border-collapse: collapse; /*两个边框合并成一条*/
+        }
+
+        table tr:nth-child(1) {
+            background-color: #ddd;
+        }
+
+        table tr:not(:first-child):hover {
+            background-color: #eee;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- <table >
+        <caption>学生表格</caption>
+    <tr class="first-tr">
+        <th>序号</th>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>性别</th>
+        <th>家乡</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+    </table> -->
+    <script>
+
+        // 定义一个存储了若干学生信息的数组，相当于从后端获取到的数据
+        let students = [
+            { name: '小明', age: 18, gender: '男', hometown: '河北省' },
+            { name: '小红', age: 19, gender: '女', hometown: '河南省' },
+            { name: '小刚', age: 17, gender: '男', hometown: '山西省' },
+            { name: '小丽', age: 18, gender: '女', hometown: '山东省' },
+            { name: '晓强', age: 18, gender: '女', hometown: '山东省' }
+        ]
+
+        document.write(`
+        <table>
+        <caption>学生表格</caption>
+    <tr class="first-tr">
+        <th>序号</th>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>性别</th>
+        <th>家乡</th>
+      
+    </tr>
+        `)
+        for(i = 0; i < students.length; i++) {
+            document.write(`<tr>
+                <td>${i+1}</td>
+        <td>${students[i]['name']}</td>
+        <td>${students[i]['age']}</td>
+        <td>${students[i]['gender']}</td>
+        <td>${students[i]['hometown']}</td>
+        
+            </tr>`)
+
+        }
+
+
+        document.write(`
+    </table>
+        `)
+    </script>
+</body>
+</html>

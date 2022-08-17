@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-CSS获取对象的方式</title>
+</head>
+<body>
+    <div>iam box</div>
+    <div>iam box</div>
+    <div class="three">iam box</div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        //1: 获取单个元素-querySelector
+        let doc = document.querySelector('.three')
+        console.log(doc) //获取到元素对象，只能得到第一个元素
+
+        let li = document.querySelector('li:nth-child(3)')
+        console.log(li)
+
+
+        // 2: 获取多个元素-querySelectorAll
+        let lis = document.querySelectorAll('li')
+        console.log(lis)
+        // 可以用遍历的方式获取里面的dom对象
+        for(i=0;i<lis.length;i++){
+            console.log(lis[i])
+
+        }
+
+
+        // 3:过时的获取dom对象方法
+        //根据id获取一个元素
+        document.getElementById('nav')
+        //根据 标签获取一类元素 获取页面 所有div
+        document.getElementsByTagName('div')
+        //根据 类名获取元素 获取页面 所有类名为 w的
+        document.getElementsByClassName('w')
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>我是大毛</li>
+        <li>我是二毛</li>
+    </ul>
+    <script>
+        // 二毛   ul.children[1]
+        // 1. 创建新的标签节点
+        // let div = document.createElement('div')
+        // div.className = 'current'  //追加属性
+        let ul = document.querySelector('ul')
+
+        let li = document.createElement('li')   // 标签选择器
+
+        li.innerHTML = '我是xiao ming'
+        // 2. 追加节点  父元素.appendChild(子元素) 后面追加
+        // ul.appendChild(li)
+        // 3. 追加节点  父元素.insertBefore(子元素， 放到那个元素的前面)   
+        ul.insertBefore(li, ul.children[0])   // 留言板都会放到最前面，这个更实用
+    </script>
+</body>
+
+</html>

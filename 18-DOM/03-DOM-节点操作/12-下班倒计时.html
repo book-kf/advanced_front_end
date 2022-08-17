@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .countdown {
+      width: 240px;
+      height: 305px;
+      text-align: center;
+      line-height: 1;
+      color: #fff;
+      background-color: brown;
+      /* background-size: 240px; */
+      /* float: left; */
+      overflow: hidden;
+    }
+
+    .countdown .next {
+      font-size: 16px;
+      margin: 25px 0 14px;
+    }
+
+    .countdown .title {
+      font-size: 33px;
+    }
+
+    .countdown .tips {
+      margin-top: 80px;
+      font-size: 23px;
+    }
+
+    .countdown small {
+      font-size: 17px;
+    }
+
+    .countdown .clock {
+      width: 142px;
+      margin: 18px auto 0;
+      overflow: hidden;
+    }
+
+    .countdown .clock span,
+    .countdown .clock i {
+      display: block;
+      text-align: center;
+      line-height: 34px;
+      font-size: 23px;
+      float: left;
+    }
+
+    .countdown .clock span {
+      width: 34px;
+      height: 34px;
+      border-radius: 2px;
+      background-color: #303430;
+    }
+
+    .countdown .clock i {
+      width: 20px;
+      font-style: normal;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="countdown">
+    <p class="next">今天是2021年8月28日</p>
+    <p class="title">下班倒计时</p>
+    <p class="clock">
+      <span id="hour">00</span>
+      <i>:</i>
+      <span id="minutes">25</span>
+      <i>:</i>
+      <span id="scond">20</span>
+    </p>
+    <p class="tips">
+      现在是18:30:00
+    </p>
+  </div>
+  <script>
+    let hour = document.querySelector('#hour')
+    let minutes = document.querySelector('#minutes')
+    let scond = document.querySelector('#scond')
+    time()
+    setInterval(time, 1000)
+    function time() {
+      // 1. 得到现在的时间戳
+      let now = +new Date()
+      // 2. 得到指定时间的时间戳
+      let last = +new Date('2021-8-29 18:30:00')
+      // 3. （计算剩余的毫秒数） / 1000 === 剩余的秒数
+      let count = (last - now) / 1000
+      // console.log(count)
+      // 4. 转换为时分秒
+      // h = parseInt(总秒数 / 60 / 60 % 24)   //   计算小时
+      let h = parseInt(count / 60 / 60 % 24)
+      h = h < 10 ? '0' + h : h
+      // m = parseInt(总秒数 / 60 % 60);     //   计算分数
+      let m = parseInt(count / 60 % 60)
+      m = m < 10 ? '0' + m : m
+      // s = parseInt(总秒数 % 60); //   计算当前秒数
+      let s = parseInt(count % 60);
+      s = s < 10 ? '0' + s : s
+      // console.log(h, m, s)
+      hour.innerHTML = h
+      minutes.innerHTML = m
+      scond.innerHTML = s
+    }
+
+  </script>
+</body>
+
+</html>

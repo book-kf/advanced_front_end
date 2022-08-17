@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+
+    .imgs{
+        width: 700px;
+        height: 320px;
+        margin: 50px auto 0;
+        background: #000;
+        position: relative;
+        
+    }
+
+    .des{
+        width: 700px;
+        height: 53px;
+        line-height: 53px;
+        position: absolute;
+        bottom: 0px;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 10;
+    }
+
+</style>
+<body>
+    <div class="imgs">
+        <img src="./images/b01.jpg" alt="">
+        <div class="des">
+            <h3>dddd</h3>
+        </div>
+    </div>
+
+    <script>
+            let data = [
+            {
+                imgSrc: 'images/b01.jpg',
+                title: '挑战云歌单，欢迎你来'
+            },
+            {
+                imgSrc: 'images/b02.jpg',
+                title: '田园日记，上演上京记'
+            },
+            {
+                imgSrc: 'images/b03.jpg',
+                title: '甜蜜攻势再次回归'
+            },
+            {
+                imgSrc: 'images/b04.jpg',
+                title: '我为歌狂，生为歌王'
+            },
+            {
+                imgSrc: 'images/b05.jpg',
+                title: '年度校园主题活动'
+            },
+            {
+                imgSrc: 'images/b06.jpg',
+                title: 'pink老师新歌发布，5月10号正式推出'
+            },
+            {
+                imgSrc: 'images/b07.jpg',
+                title: '动力火车来到西安'
+            },
+            {
+                imgSrc: 'images/b08.jpg',
+                title: '钢铁侠3，英雄镇东风'
+            },
+            {
+                imgSrc: 'images/b09.jpg',
+                title: '我用整颗心来等你'
+            },
+        ]
+        let img = document.querySelector("img")
+        let text = document.querySelector("h3")
+        i = data.length
+        setInterval(function() {
+            console.log(i)
+            i--
+            img.src = `./${data[i]["imgSrc"]}`
+            text.innerHTML = `${data[i]["title"]}`
+
+            if(i ===0 ){
+                i = data.length
+            }
+        }, 1000)
+        
+
+    </script>
+</body>
+</html>

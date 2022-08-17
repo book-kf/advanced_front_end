@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let goods = {
+        //     name: '小米10青春版',
+        //     num: '100012816024',
+        //     weight: '0.55kg',
+        //     address: '中国大陆'
+        // }
+        // console.dir(goods)
+
+        // 声明人对象
+        let person = {
+            uname: '刘德华',
+            age: 18,
+            sex: '男',
+            // 方法名：function(){}
+            sayHi: function () {
+                console.log('hi~~~')
+            },
+            mtv: function (s) {
+                console.log(s)
+            }
+        }
+        // console.log(uname)
+        // 1. 访问属性  得到值   对象.属性名
+        console.log(person.uname)
+        console.log(person.age)
+        // 2. 访问属性  得到值   对象['属性名']
+        console.log(person['sex'])
+        // 调用方法 对象.方法名()
+        person.sayHi()
+        person.mtv('无间道')
+
+        // document.write()
+    </script>
+</body>
+
+</html>
